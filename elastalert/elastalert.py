@@ -1337,7 +1337,7 @@ class ElastAlerter(object):
             kb_link = generate_kibana_discover_url(rule, matches[0])
             if kb_link:
                 kb_link_formatter = self.get_kibana_discover_external_url_formatter(rule)
-                matches[0]['kibana_discover_url'] =  kb_link_formatter.format(kb_link)
+                matches[0]['kibana_discover_url'] =  '<' + kb_link_formatter.format(kb_link) + '|Click here for details>'
 
         # Enhancements were already run at match time if
         # run_enhancements_first is set or
